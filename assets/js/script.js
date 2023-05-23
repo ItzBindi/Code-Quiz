@@ -24,7 +24,7 @@ var questionsList = [
         correctAnswer: "all of the above"
     }
 ]
-console.log(questionsList[1].answers.b);
+// console.log(questionsList[1].answers.b);
 startbtn.addEventListener("click", function(e){
 
     randomquestion();
@@ -42,21 +42,36 @@ startbtn.addEventListener("click", function(e){
 })
 var answerBox = document.getElementById("hello");
 
+answerBox.addEventListener("click", function(event){
+    
+    if(event.target.matches("li")){
+        if (event.target.textContent === questionsList[0].correctAnswer || event.target.textContent === questionsList[1].correctAnswer){
+            console.log("correct");
+        }else {
+            console.log("incorrect");
+        }
+        if (correctAnswer === true){
+            
+        }
+
+
+    }
+})
+
     function randomquestion() {
     var randques = questionsList[Math.floor(Math.random() * questionsList.length)];
     console.log(randques);
     
     var randquesdisplay = randques.question+ "<br><br>";
-        console.log(randquesdisplay);
+        // console.log(randquesdisplay);
     var answers = randques.answers;
     //this loop iterates over an object where answersKey is the current key and answers is the object we are looping through
     for (var answersKey in answers) {
         var answerEl = document.createElement("li");
         answerEl.textContent = answers[answersKey];
-        console.log(answerEl);
+        // console.log(answerEl);
         answerBox.append(answerEl);
-        // node.appendChild(node)
-        // randquesdisplay += answersKey + ") " + answers[answersKey] + "<br>";
+        
     }
   
     h2El.innerHTML = randquesdisplay;
@@ -67,7 +82,7 @@ var answerBox = document.getElementById("hello");
   function questionClick(event) { 
     let text = event.target.value;
     // document.getElementById("demo").innerHTML = text;
-    console.log(text);
+    // console.log(text);
   }
 
   document.addEventListener("click", questionClick)
