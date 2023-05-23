@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+}
+
+Header {
+    display: inline-block;
+    text-align: center;
+    font-size: 40px;
+    
+    
+    
+}
+
+#div {
+    display: flex;
+    justify-content: center;
+    
+    margin: 30px;
+  }
+  
+  section {
+    text-align: center;
+  }
+
+  #start {
+   background-color: purple;
+   padding: 30px;
+   font-weight: bolder;
+  }

@@ -2,6 +2,9 @@ var startbtn = document.getElementById("start");
 var timer = document.getElementById("timer");
 var count = 10;
 var h2El = document.getElementById("word");
+var wins = document.getElementById("wins")
+var losses = document.getElementById("losses")
+
 var questionsList = [
     {
         question: "Commonly used data types DO NOT include:",
@@ -25,6 +28,8 @@ var questionsList = [
     }
 ]
 // console.log(questionsList[1].answers.b);
+var shownquestions = [];
+
 startbtn.addEventListener("click", function(e){
 
     randomquestion();
@@ -46,13 +51,13 @@ answerBox.addEventListener("click", function(event){
     
     if(event.target.matches("li")){
         if (event.target.textContent === questionsList[0].correctAnswer || event.target.textContent === questionsList[1].correctAnswer){
-            console.log("correct");
+            h2El.textContent = "Correct!"
+            wins++
         }else {
-            console.log("incorrect");
+            h2El.textContent = "incorrect!"
         }
-        if (correctAnswer === true){
-            
-        }
+        
+        
 
 
     }
