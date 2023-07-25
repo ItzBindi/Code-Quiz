@@ -1,6 +1,6 @@
 var startbtn = document.getElementById("start");
 var quesDiv = document.getElementById("ques");
-var count = 10;
+var count = 30;
 var timer = document.getElementById("timer");
 var h2El = document.getElementById("word");
 var wins = 0;
@@ -18,7 +18,23 @@ var questionsList = [
         question: "Arrays in JavaScript can be used to store:",
         answers: ["numbers and strings", "other arrays", "booleans", "all of the above"],
         correctAnswer: "all of the above"
-    }
+    },
+    {
+        question:  "What is || used for?",
+        answers: ["or", "and", "not", "equal"],
+        correctAnswer: "or"
+    },
+    {
+        question: "What does HOISTING mean?",
+        answers: ["is the process where the interpreter moves the declaration of classes, functions, or variables to the top of their method, before their execution", "is the process where the interpreter moves the declaration of classes, functions, or variables to the top of their scope, before their execution", "is the process where the interpreter moves the declaration of classes, functions, or variables to the bottom of their scope, before their execution", "is the process where the interpreter moves the declaration of only classes to the top of their scope, before their execution"],
+        correctAnswer: "is the process where the interpreter moves the declaration of classes, functions, or variables to the top of their scope, before their execution"
+    },
+    {
+        question: "What is the difference between == and ===?",
+        answers: ["== is used to compare two variables, but === is used to assign two variables", "== is used to assign two variables, but === is used to compare two variables", "== is used to compare two variables, but === is used to compare two variables", "== is used to assign two variables, but === is used to assign two variables"],
+        correctAnswer: "== is used to compare two variables, but === is used to compare two variables"
+    },
+
 ]
 
 startbtn.addEventListener("click", function (e) {
